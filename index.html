@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1d1b1a;
+        }
+        .stage{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 56px;
+            padding:56px 32px
+        }
+        .cube{
+            width: 170px;
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font: 600 20px/1 sans-serif;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .c1{
+            border-radius: 50%;
+            background: linear-gradient(135deg,#ff9a56,#ff5e62);
+            box-shadow: 0 10px 24px rgba(255, 94, 98, .35);
+        }
+        .c2{
+            border-radius: 24px;
+            background: linear-gradient(135deg,#45caff,#2870ea);
+            box-shadow: 0 10px 24px rgba(40, 112, 234, .35);
+        }
+        .c3{
+            border-radius: 12px;
+            background: linear-gradient(135deg,#b16cea,#ff6bcb);
+            box-shadow: 0 10px 24px rgba(177, 108, 234, .35);
+        }
+        .c4{
+            border-radius: 50% 12px 50% 12px;
+            background: linear-gradient(135deg,#56d364,#00a884);
+            box-shadow: 0 10px 24px rgba(0, 168, 132, .35);
+        }
+        .c5{
+            border-radius: 50%;
+            background: linear-gradient(135deg,#ffe259,#ffa751);
+            box-shadow: 0 10px 24px rgba(255, 167, 81, .35);
+        }
+        .c6{
+            border-radius: 12px 50% 12px 50%;
+            background: linear-gradient(135deg,#667eea,#764ba2);
+            box-shadow: 0 10px 24px rgba(102, 126, 234, .35);
+        }
+        .cube:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 24px rgba(255, 255, 255, .2);
+        }
+        .cube::after{
+            content: "";
+        }
+        .cube:hover::after{
+            content: "hover";
+        }
+        @media (prefers-reduced-motion: reduce){
+            .cube{ transition: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+            <div class="cube c1"></div>
+            <div class="cube c2"></div>
+            <div class="cube c3"></div>
+            <div class="cube c4"></div>
+            <div class="cube c5"></div>
+            <div class="cube c6"></div>
+    </div>
+</body>
+</html>
